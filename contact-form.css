@@ -11,6 +11,9 @@ html {
   background: rgb(20, 19, 19);
   font-family: "Montserrat", sans-serif;
 }
+body {
+  display: inline;
+}
 
 .header > h1 {
   font-size: 70px;
@@ -18,13 +21,8 @@ html {
   text-align: center;
   margin-left: -50px;
 
-  /* text-shadow: 4px 4px #ffffff; */
-  /* color: transparent; */
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
 }
-/* .header > h1:hover {
-    text-shadow: 2px 4px #c900db;
-  } */
 
 /* Header Nav */
 nav {
@@ -64,13 +62,10 @@ nav ul li {
   display: inline-block;
   margin-left: 50px;
 }
+
 #container {
-  /* width: 500px; */
-  text-align: left;
-  /* border: 2px solid red; */
-  display: inline;
-  position: absolute;
-  margin: 10% 30%;
+  width: 50%;
+  margin: 8em auto;
 }
 
 #email {
@@ -142,46 +137,6 @@ button:hover {
   color: black;
 }
 
-/* Footer */
-footer {
-  position: absolute;
-  margin-bottom: -100px;
-  bottom: 0%;
-  width: 90%;
-  padding: 0 5%;
-  color: white;
-}
-footer a {
-  text-decoration: none;
-  color: var(--main-black);
-}
-
-footer ul {
-  list-style: none;
-  float: right;
-}
-
-footer ul li {
-  display: inline-block;
-  margin-left: 50px;
-}
-
-.copy a,
-.copy p {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.copy p {
-  margin-left: 20px;
-}
-
-footer ul,
-.copy {
-  line-height: 80px;
-  display: inline-block;
-}
-
 .mobile {
   display: none;
 }
@@ -217,5 +172,69 @@ footer ul,
 
   #toggle:checked + #menu {
     display: block;
+  }
+  footer {
+    position: absolute;
+    margin-bottom: -200px;
+    bottom: 0%;
+    width: 90%;
+    padding: 0 5%;
+    color: white;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .btnWhite {
+    margin-bottom: 20px;
+  }
+  #flex2 {
+    display: none;
+  }
+  #flex1 {
+    margin-top: 50px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .callToAction {
+    width: 90%;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+
+  #toggle {
+    display: none;
+  }
+  label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 20px;
+    font-size: 30px;
+    color: white;
+    margin-top: 22px;
+  }
+  #toggle:not(:checked) + #menu {
+    display: none;
+  }
+
+  #toggle:checked + #menu {
+    display: inline;
+  }
+  #menu ul {
+    text-align: center;
+    width: 100%;
+  }
+  #menu li {
+    text-align: center;
+    width: 100%;
   }
 }
